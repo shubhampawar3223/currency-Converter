@@ -1,10 +1,9 @@
-
 var data,values;
 var fromElement1;
 var fromElement2;
 var database=[]
 resultElement = document.createElement("div")
-resultElement.setAttribute("class","offset-3 col-6")
+resultElement.setAttribute("class"," offset-lg-3 offset-xl-3 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-3")
 getApiResponse();
 async function getApiResponse(){
         let currencyResponse = await fetch("https://api.exchangeratesapi.io/latest")
@@ -38,10 +37,6 @@ async function getApiResponse(){
         keys.push("EUR");
          values.push(1);
          setSelectValues(database)
-
-         
-         
-
         
 let c1,c2;
 function setSelectValues(database){
@@ -95,17 +90,15 @@ rowElement.setAttribute("class","row");
 
 let colElement= document.createElement("div")
 colElement.setAttribute("class","offset-3 col-6 p-3 para");
-colElement.style.backgroundColor="#9cbdf7"
-
-    
+colElement.style.backgroundColor="#121c57"
 
 
 function showResult(result1, result2,curr1,cur2){
     
         colElement.innerHTML="";
         colElement.innerHTML="Result= " +result1 +""+cur2;
-        colElement.style.fontSize="30px"; 
-
+        colElement.style.fontSize="30px";
+        colElement.style.color ="white"     
     document.body.append(resultElement);
     resultElement.append(rowElement);
     rowElement.append(colElement);
@@ -117,16 +110,10 @@ function showError(){
     colElement.innerHTML="";
     colElement.innerHTML="Invalid Inputs"
     colElement.style.fontSize="30px";
-
+    
+    colElement.style.color="red"
     document.body.append(resultElement);
     resultElement.append(rowElement);
     rowElement.append(colElement);
 }
 }
-
-
-
- 
-
-
-
