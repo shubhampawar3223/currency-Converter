@@ -1,3 +1,4 @@
+
 var data,values;
 var fromElement1;
 var fromElement2;
@@ -37,6 +38,10 @@ async function getApiResponse(){
         keys.push("EUR");
          values.push(1);
          setSelectValues(database)
+
+         
+         
+
         
 let c1,c2;
 function setSelectValues(database){
@@ -89,8 +94,9 @@ let rowElement= document.createElement("div")
 rowElement.setAttribute("class","row");
 
 let colElement= document.createElement("div")
-colElement.setAttribute("class","offset-3 col-6 p-3 para");
+colElement.setAttribute("class","offset-3 col-6 p-3 para text-center");
 colElement.style.backgroundColor="#121c57"
+
 
 
 function showResult(result1, result2,curr1,cur2){
